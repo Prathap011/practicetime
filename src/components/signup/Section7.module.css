@@ -541,8 +541,12 @@
   /* .example04,
   .div,
   .column,*/
-  .subjectWrapper,
-  .logo {
+    .img {
+    width: 250px;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .subjectWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
