@@ -1,0 +1,460 @@
+/* Wrapper */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  z-index: 10;
+  /* margin: 40px 100px; */
+}
+
+/* Logo */
+
+.logo-image {
+  height: 32px;
+  object-fit: contain;
+}
+
+.nav-image {
+  margin-right: -5px;
+  width: 32px;
+  height: 32px;
+  max-height: 32px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  /* You can adjust the color */
+  object-fit: cover;
+  padding: 5px;
+}
+
+.track-progress {
+  border: 1px solid #ccc;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.navbar-line {
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  margin: 0px 5px;
+  background-color: #dddddd;
+}
+
+.avatar-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.emoji-img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+/* Hamburger */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
+/* Menu */
+.navbar-menu ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* .navbar-menu li:hover {
+  background-color: #fef08a;
+} */
+
+.user-info span {
+  font-weight: bold;
+}
+
+.logout {
+  color: #dc2626;
+}
+
+/* User dropdown */
+.user-dropdown {
+  position: relative;
+}
+
+.web-navbar {
+  display: block;
+}
+
+.mobile-navbar {
+  display: none;
+}
+
+.user-trigger {
+  margin-left: -10px !important;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.navbar-arrow {
+  margin-left: 10px;
+  color: #3498db;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin-top: 8px;
+  padding: 8px 0;
+  /* min-width: 150px; */
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 10px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+  /* background-color: #fef2f2; */
+  color: #dc2626;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.dropdown-header .emoji {
+  font-size: 1.2rem;
+}
+
+.greeting {
+  white-space: nowrap;
+}
+
+.navbar-menu hr {
+  margin: 0.5rem 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+.navbar-menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chevron {
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .web-navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: block;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: white; */
+    border: none;
+    border-radius: 12px;
+    padding: 0px 0rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hamburger {
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 black;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    color: #ff5757;
+  }
+
+  /* Custom 2-line hamburger icon */
+  .two-line-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+    margin: 5px 2px;
+  }
+
+  .two-line-icon span {
+    height: 3px;
+
+    background: #3498db;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .hamburger:hover,
+  .hamburger:focus {
+    background-color: white;
+    color: black;
+    /* Prevent it from turning blue on click or focus */
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #000;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin-top: 15px;
+    flex-direction: column;
+    box-shadow: 3px 3px 0 black;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-menu ul {
+    display: flex;
+    /* <-- Add this line */
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Emoji replacement image */
+  .emoji-img {
+    width: 25px;
+    height: 25px;
+    /* vertical-align: middle; */
+    /* margin: 0 4px; */
+  }
+
+  .hand-img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+  }
+
+  /* Dropdown header styling */
+  .dropdown-header {
+    display: flex;
+    align-items: flex-start;
+    /* gap: 8px; */
+    font-size: 14px;
+    margin-left: -15px;
+  }
+
+
+
+  /* List item space-between layout */
+  .navbar-menu ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  .chevron {
+    font-size: 12px;
+    color: #aaaaaa;
+  }
+}
+
+@media (max-width: 768px) {
+  .logout-modal {
+    background-color: white;
+    padding: 20px 0px !important;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 350px !important;
+    width: 100% !important;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+    border: 2px solid black;
+    box-shadow: 2px 2px 0px 0px #000000, inset 0px 8px 4px 0px #0000000a !important;
+  }
+
+}
+@media (max-width: 768px) {
+  .modal-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  .modal-buttons .logout-btn {
+    order: 1;
+    width: 100%;
+  padding: 10px 0px !important;
+
+  }
+
+  .modal-buttons .cancel-btn {
+    order: 2;
+    width: 100%;
+  padding: 10px 0px !important;
+border: none !important;
+  }
+
+
+
+  .modal-buttons button {
+    height: 3.2rem;
+    font-size: 15px;
+  }
+}
+
+
+
+.logout-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+}
+
+.logout-modal {
+  background-color: white;
+  padding: 50px 64px;
+  border-radius: 1rem;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logout-modal h3 {
+  margin: 0px 40px;
+  font-size: 20px;
+  font-weight: 400 !important;
+}
+
+.logout-modal p {
+  margin: 0px 35px;
+  font-size: 14px;
+  font-weight: 300 !important;
+  color: #999999;
+}
+.modal-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; /* makes buttons take same height */
+  margin-top: 1rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.modal-buttons button {
+  flex: 1; /* full width for both buttons */
+  height: 3.5rem; /* or use 100% if inside a container with fixed height */
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #DDDDDD !important;
+  font-weight: bold;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "Geologica", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #fff;
+  border: 1px solid black;
+  color: black;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #FF5757;
+  color: black;
+  font-weight: 500;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "Geologica", sans-serif;
+  box-shadow: 4px 4px 0px 0px #000000, inset 0px 8px 4px 0px #0000000a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1.5px solid black;
+}
+
+.logout-btn:hover {
+  box-shadow: none;
+}
+

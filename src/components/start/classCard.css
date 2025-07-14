@@ -1,0 +1,164 @@
+
+.practice-container {
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dddddd;
+  border-radius: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #7B61FF;
+}
+
+.subject-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.subject-btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subject-btn.active {
+  background-color: #7B61FF;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.classcard {
+  background: white;
+  border-radius: 15px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid transparent;
+}
+.classcard:hover {
+  border-color: var(--topic-color); /* On hover, show border color */
+}
+.skills-arrow {
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  display: inline-flex; /* Ensure icon stays visible */
+  align-items: center;
+  justify-content: center;
+}
+.classcard:hover .skills-arrow {
+  background-color: var(--topic-color);
+  color: white; /* Show white icon over colored background */
+  padding: 8px; /* Reasonable padding */
+}
+.classcard:hover .skills-arrow {
+  background-color: var(--topic-color);
+  color: var(--topic-color);
+  padding: 15px;
+}
+
+.skills-row {
+  margin-top: auto; /* pushes this row to the bottom */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.arrow-icon {
+  margin-left: 0.5rem;
+}
+
+
+
+.class-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+    background-color: #fff4d8; /* Light yellow background */
+  border-radius: 999px;
+  padding-right: 16px;
+  width: fit-content;
+}
+
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #fcb600; /* Yellow background */
+  border-radius: 50%;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white; /* White ring around circle */
+  margin-right: 12px;
+}
+
+.class-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+
+.class-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.skills {
+  font-weight: 400;
+  color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
+}
